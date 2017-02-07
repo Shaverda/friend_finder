@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>friend_finder</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form id="form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name">
+                <small id="emailHelp" class="form-text text-muted">required. how else will your one true love know who you are?</small>
+            </div>
+            <div class="form-group">
+                <label for="picture_link">Photo Link</label>
+                <input type="url" class="form-control" id="picture_link" aria-describedby="emailHelp" placeholder="Enter url to photo">
+                <small id="emailHelp" class="form-text text-muted">required. how else will your one true love know what you look like on the internet?</small>
+            </div>            
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">how happy are you
+                    <input class="form-check-input" type="radio" name="question1" id="inlineRadio1" value="1"> 1
+                    <input class="form-check-input" type="radio" name="question1" id="inlineRadio2" value="2"> 2
+                    <input class="form-check-input" type="radio" name="question1" id="inlineRadio3" value="3"> 3
+                    <input class="form-check-input" type="radio" name="question1" id="inlineRadio4" value="4"> 4
+                    <input class="form-check-input" type="radio" name="question1" id="inlineRadio5" value="5"> 5
+                </label>
+                <hr>
+                <label class="form-check-label">how happy do you want your partner to be
+                    <input class="form-check-input" type="radio" name="question2" id="inlineRadio1" value="1"> 1
+                    <input class="form-check-input" type="radio" name="question2" id="inlineRadio2" value="2"> 2
+                    <input class="form-check-input" type="radio" name="question2" id="inlineRadio3" value="3"> 3
+                    <input class="form-check-input" type="radio" name="question2" id="inlineRadio4" value="4"> 4
+                    <input class="form-check-input" type="radio" name="question2" id="inlineRadio5" value="5"> 5
+                </label>
+                <hr>
+                <label class="form-check-label">how much do you dream of "settling down" [whatever that means]:
+                    <input class="form-check-input" type="radio" name="question3" id="inlineRadio1" value="1"> 1
+                    <input class="form-check-input" type="radio" name="question3" id="inlineRadio2" value="2"> 2
+                    <input class="form-check-input" type="radio" name="question3" id="inlineRadio3" value="3"> 3
+                    <input class="form-check-input" type="radio" name="question3" id="inlineRadio4" value="4"> 4
+                    <input class="form-check-input" type="radio" name="question3" id="inlineRadio5" value="5"> 5
+                </label>
+                <hr>
+                <label class="form-check-label">how much do you like to listen to la la land
+                    <input class="form-check-input" type="radio" name="question4" id="inlineRadio1" value="1"> 1
+                    <input class="form-check-input" type="radio" name="question4" id="inlineRadio2" value="2"> 2
+                    <input class="form-check-input" type="radio" name="question4" id="inlineRadio3" value="3"> 3
+                    <input class="form-check-input" type="radio" name="question4" id="inlineRadio4" value="4"> 4
+                    <input class="form-check-input" type="radio" name="question4" id="inlineRadio5" value="5"> 5
+                </label>
+                <hr>
+                <label class="form-check-label"> how much difficulty would you have coming up with questions if you were coding a friend.finder
+                    <input class="form-check-input" type="radio" name="question5" id="inlineRadio1" value="1"> 1
+                    <input class="form-check-input" type="radio" name="question5" id="inlineRadio2" value="2"> 2
+                    <input class="form-check-input" type="radio" name="question5" id="inlineRadio3" value="3"> 3
+                    <input class="form-check-input" type="radio" name="question5" id="inlineRadio4" value="4"> 4
+                    <input class="form-check-input" type="radio" name="question5" id="inlineRadio5" value="5"> 5
+                </label>
+                <hr>
+                <label class="form-check-label">how often do you understand movie references
+                    <input class="form-check-input" type="radio" name="question6" id="inlineRadio1" value="1"> 1
+                    <input class="form-check-input" type="radio" name="question6" id="inlineRadio2" value="2"> 2
+                    <input class="form-check-input" type="radio" name="question6" id="inlineRadio3" value="3"> 3
+                    <input class="form-check-input" type="radio" name="question6" id="inlineRadio4" value="4"> 4
+                    <input class="form-check-input" type="radio" name="question6" id="inlineRadio5" value="5"> 5
+                </label>
+                <hr>
+                <label class="form-check-label">how much would you like to trade shoes
+                    <input class="form-check-input" type="radio" name="question7" id="inlineRadio1" value="1"> 1
+                    <input class="form-check-input" type="radio" name="question7" id="inlineRadio2" value="2"> 2
+                    <input class="form-check-input" type="radio" name="question7" id="inlineRadio3" value="3"> 3
+                    <input class="form-check-input" type="radio" name="question7" id="inlineRadio4" value="4"> 4
+                    <input class="form-check-input" type="radio" name="question7" id="inlineRadio5" value="5"> 5
+                </label>
+                <hr>
+                <label class="form-check-label">how likely are you to share your toothbrush
+                    <input class="form-check-input" type="radio" name="question8" id="inlineRadio1" value="1"> 1
+                    <input class="form-check-input" type="radio" name="question8" id="inlineRadio2" value="2"> 2
+                    <input class="form-check-input" type="radio" name="question8" id="inlineRadio3" value="3"> 3
+                    <input class="form-check-input" type="radio" name="question8" id="inlineRadio4" value="4"> 4
+                    <input class="form-check-input" type="radio" name="question8" id="inlineRadio5" value="5"> 5
+                </label>
+                <hr>
+                <label class="form-check-label">how likely are you to show someone the wikipedia page on the biological basis of love when they ask you what love is
+                    <input class="form-check-input" type="radio" name="question9" id="inlineRadio1" value="1"> 1
+                    <input class="form-check-input" type="radio" name="question9" id="inlineRadio2" value="2"> 2
+                    <input class="form-check-input" type="radio" name="question9" id="inlineRadio3" value="3"> 3
+                    <input class="form-check-input" type="radio" name="question9" id="inlineRadio4" value="4"> 4
+                    <input class="form-check-input" type="radio" name="question9" id="inlineRadio5" value="5"> 5
+                </label>
+                <hr>
+                <label class="form-check-label">how do i even
+                    <input class="form-check-input" type="radio" name="question10" id="inlineRadio1" value="1"> 1
+                    <input class="form-check-input" type="radio" name="question10" id="inlineRadio2" value="2"> 2
+                    <input class="form-check-input" type="radio" name="question10" id="inlineRadio3" value="3"> 3
+                    <input class="form-check-input" type="radio" name="question10" id="inlineRadio4" value="4"> 4
+                    <input class="form-check-input" type="radio" name="question10" id="inlineRadio5" value="5"> 5
+                </label>
+            </div>
+            <div class="text-left">
+                <button type="submit" class="btn btn-primary btn-md" id="submit-btn"><span></span>finito? click me.</button>
+            </div>
+        </form>
+    </div>
+    <script>
+    var get_answers = () => {
+        var answer_array = [];
+        for (var i = 1; i < 11; i++){ //loop through questions
+                var answer = $(`input[name='question${i}']:checked`).val();
+                answer_array.push(answer);
+        }
+        return answer_array;
+    }
+
+    $("#submit-btn").on("click", function(event) {
+        event.preventDefault();
+        var answer_array = get_answers();
+        var new_person = {
+            name: $("#name").val().trim(),
+            picture: $("#picture_link").val().trim(),
+            answers: answer_array
+        }
+        new_person = JSON.stringify(new_person);
+
+        $.ajax({
+            type: "POST",
+            url: "/api/friends",
+            data: new_person
+        }).done(function(response){
+            console.log("Submitted.");
+        })
+
+    })
+
+
+    </script>
+</body>
+
+</html>
