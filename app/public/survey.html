@@ -128,15 +128,15 @@
             picture: $("#picture_link").val().trim(),
             answers: answer_array
         }
-        new_person = JSON.stringify(new_person);
+        new_person = new_person;//JSON.stringify(new_person);
 
-        $.ajax({
-            type: "POST",
-            url: "/api/friends",
-            data: new_person
-        }).done(function(response){
-            console.log("Submitted.");
-        })
+        var url = window.location.origin;
+
+        $.post(url + "/api/friends",
+            new_person, function(data){
+                console.log(data.name);
+                console.log(data);
+            })
 
     })
 

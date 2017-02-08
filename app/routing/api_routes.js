@@ -1,17 +1,29 @@
-var friends = require("../data/friends.json");
+var friends = require("../data/friends.js");
 
-friends = [friends];
 
 module.exports = function(app) {
     app.get("/api/friends", function(req, res) {
         res.json({
-        	friends: friends
+            friends: friends
         });
     })
 
-    app.post("api/friends", function(req, res){
-    	console.log(req.body);
-    	friends.push(req.body);
-    	res.end;
+    app.post("/api/friends", function(req, res){
+        var lowest_difference = 10;
+        var match;
+        friends.forEach(function(friend) {
+            for (var i = 0; i < 10; i++){
+                var difference = 0;
+                difference+= Math.abs(friend.answers[i] - req.body.answers[i]);
+                if (lowest_difference > difference){
+                    lowest_difference = difference;
+                    match = friend;
+                }
+ 
+            }
+        })
+        friends.push(req.body);
+        res.json(match);
     })
+
 }
