@@ -9,7 +9,7 @@ module.exports = function(app) {
     })
 
     app.post("/api/friends", function(req, res){
-        var lowest_difference = 10;
+        var lowest_difference = 30;
         var match;
         friends.forEach(function(friend) {
             for (var i = 0; i < 10; i++){
@@ -24,6 +24,5 @@ module.exports = function(app) {
         })
         friends.push(req.body);
         res.json(match);
-    })
-
-}
+    });
+};

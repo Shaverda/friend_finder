@@ -16,6 +16,9 @@
   "bugs": {
     "url": "https://github.com/Shaverda/friend_finder/issues"
   },
+  "engines": {
+    "node": "6.9.4"
+  },
   "homepage": "https://github.com/Shaverda/friend_finder#readme",
   "dependencies": {
     "body-parser": "^1.16.0",
